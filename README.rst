@@ -10,7 +10,8 @@ The :code:`build` script builds a Docker container,
 .. code::
 
     $ ./build MY_VERSION
-    $ docker run --rm -it --publish 8080:8080 moshez/sayhello:MY_VERSION --port 8080
+    $ docker run --rm -it --publish 8080:8080 \
+      moshez/sayhello:MY_VERSION --port 8080
 
 There will be a simple application running on port 8080.
 
@@ -20,7 +21,9 @@ then run:
 
 .. code::
 
-    $ docker run --rm -it --publish 443:443 moshez/sayhello:MY_VERSION --port le:/srv/www/certs:tcp:443 --empty-file /srv/www/certs/hello.example.com.pem
+    $ docker run --rm -it --publish 443:443 \
+      moshez/sayhello:MY_VERSION --port le:/srv/www/certs:tcp:443 \
+      --empty-file /srv/www/certs/hello.example.com.pem
 
 It will result in the same application running on a secure web site:
 :code:`https://hello.example.com`.
