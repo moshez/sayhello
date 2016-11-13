@@ -31,6 +31,9 @@ Deploying them often requires complicated set-ups.
 .. _Flask: http://flask.pocoo.org/
 .. _Bottle: https://bottlepy.org/docs/dev/
 .. _Twisted: https://twistedmatrix.com/documents/16.5.0/web/howto/web-in-60/wsgi.html
+.. _uwsgi: https://uwsgi-docs.readthedocs.io/en/latest/
+.. _Apache: https://modwsgi.readthedocs.io/en/develop/
+.. _Gunicorn: http://gunicorn.org/
 
 Containers
 ----------
