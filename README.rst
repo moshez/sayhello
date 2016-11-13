@@ -1,6 +1,30 @@
 Saying Hello
 ============
 
+Too Long: Didn't Read
+---------------------
+
+The :code:`build` script builds a Docker container,
+:code:`moshez/sayhello:<version>`.
+
+.. code::
+
+    $ ./build MY_VERSION
+    $ docker run --rm -it --publish 8080:8080 moshez/sayhello:MY_VERSION --port 8080
+
+There will be a simple application running on port 8080.
+
+If you own the domain name :code:`hello.example.com`,
+you can point it at a machine that the domain resolves to and
+then run:
+
+.. code::
+
+    $ docker run --rm -it --publish 443:443 moshez/sayhello:MY_VERSION --port le:/srv/www/certs:tcp:443 --empty-file /srv/www/certs/hello.example.com.pem
+
+It will result in the same application running on a secure web site:
+:code:`https://hello.example.com`.
+
 Introduction
 ------------
 
@@ -145,6 +169,8 @@ Tristan Seligmann has written txacme.
 Amber "Hawkowl" Brown has written "twist",
 which is much better at running Twisted-based services than
 the older "twistd".
+
+Of course, all mistakes and problems here are completely my responsibility.
 
 .. _blog: https://glyph.twistedmatrix.com/2015/03/docker-deploy-double-dutch.html
 .. _spoken: http://pyvideo.org/djangocon-2011/djangocon-2011--keynote---glyph-lefkowitz.html
