@@ -25,12 +25,12 @@ images, CSS and JavaScript files,
 even if all HTML is dynamically generated.
 Deploying them often requires complicated set-ups.
 
-.. _WSGI: 
-.. _Django: 
-.. _Pyramid: 
-.. _Flask: 
-.. _Bottle: 
-.. _Twisted:
+.. _WSGI: https://wsgi.readthedocs.io/en/latest/
+.. _Django: https://www.djangoproject.com/
+.. _Pyramid: http://docs.pylonsproject.org/en/latest/docs/pyramid.html#pyramid-documentation
+.. _Flask: http://flask.pocoo.org/
+.. _Bottle: https://bottlepy.org/docs/dev/
+.. _Twisted: https://twistedmatrix.com/documents/16.5.0/web/howto/web-in-60/wsgi.html
 
 Containers
 ----------
@@ -64,7 +64,7 @@ The best practice is to give it a list of wheels,
 and build the wheels with :code:`pip wheel`.
 
 .. _Pex: https://pex.readthedocs.io/en/stable/
-.. _pip: 
+.. _pip: https://pip.pypa.io/en/stable/
 
 pkg_resources
 -------------
@@ -97,6 +97,7 @@ to support ACME.
 
 .. _Let's Encrypt: https://letsencrypt.org/donate/
 .. _ACME: https://github.com/letsencrypt/acme-spec
+.. _txacme: https://txacme.readthedocs.io/en/latest/
 .. _server endpoint: https://twistedmatrix.com/documents/16.5.0/api/twisted.internet.interfaces.IStreamServerEndpointStringParser.html
 
 Twist 
