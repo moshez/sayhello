@@ -126,6 +126,15 @@ In it, we have three parts:
 * :code:`src/sayhello/data/index.html`: an HTML file meant to serve as the root
 * :code:`src/twisted/plugins/sayhello.py`: A Twist plugin
 
+There is also some build infrastructure:
+
+* :code:`build` is a Python script to run the build.
+* :code:`build.docker` is a Dockerfile designed to build pex files,
+  but not run as a production server.
+* :code:`run.docker` is a Dockerfile designed for production container.
+
+Note that build does *not* push the resulting container to DockerHub.
+
 Credits
 -------
 
@@ -134,7 +143,7 @@ Glyph Lefkowitz has inspired me in his blog_ about how to build efficient contai
 Tristan Seligmann has written txacme.
 
 Amber "Hawkowl" Brown has written "twist",
-which much better at running Twisted-based services than
+which is much better at running Twisted-based services than
 the older "twistd".
 
 .. _blog: https://glyph.twistedmatrix.com/2015/03/docker-deploy-double-dutch.html
