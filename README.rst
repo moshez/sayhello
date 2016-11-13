@@ -68,6 +68,7 @@ and build the wheels with :code:`pip wheel`.
 
 .. _Pex: https://pex.readthedocs.io/en/stable/
 .. _pip: https://pip.pypa.io/en/stable/
+.. _PyPI: https://pypi.python.org/pypi
 
 pkg_resources
 -------------
@@ -81,7 +82,7 @@ The code:`pex` format relies on this feature of Python,
 so adherence to using :code:`pkg_resources` to access `data files`_
 is important in order to not break code:`pex` compatibility.
 
-.. _pkg_resources: http://setuptools.readthedocs.io/en/latest/pkg_resources.html
+.. _pkg_resources: https://setuptools.readthedocs.io/en/latest/pkg_resources.html
 .. _zipped directory: https://docs.python.org/2/library/zipimport.html
 .. _data files: https://docs.python.org/2/distutils/setupscript.html#installing-package-data
 
@@ -113,7 +114,7 @@ a pretty nifty language,
 while still allowing specific customizations at the point of use
 via command line parameters.
 
-.. _service plugin: http://twistedmatrix.com/documents/current/core/howto/tap.html
+.. _service plugin: https://twistedmatrix.com/documents/current/core/howto/tap.html
 
 Putting it all together
 -----------------------
