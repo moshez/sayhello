@@ -1,4 +1,12 @@
-#!/bin/sh
-docker build -t sayhello-build -f build.docker .
-docker run --rm -it -v $(pwd):/mnt/src sayhello-build /mnt/src txacme -o /mnt/src/twist.pex -m twisted.application.twist._twist:Twist.main
-docker build -t moshez/sayhello:$1  -f run.docker .
+#!/usr/bin/env python
+
+import os
+import subprocess
+import sys
+
+HERE = os.path.dirname(os.path.abspath(sys.argv[0]))
+VERSION = sys.argv[1]
+
+subprocess.check_call(['docker', 'build', '-t', 'sayhello-build', '-f', 'build.docker', '.'])
+subprocess.check_call(['docker', 'run', '--rm', '-it', '-v', HERE + ':/mnt/src', 'sayhello-build', '/mnt/src', 'txacme', '-o', '/mnt/src/twist.pex', '-m', 'twisted.application.twist._twist:Twist.main'])
+subprocess.check_call(['docker', 'build', '-t', 'moshez/sayhello:' + VERSION, '-f', 'run.docker', '.'])
